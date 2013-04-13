@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <description url="http://www.psnet.nu/eclipse/updates">
+      Update site for QuickImage
+   </description>
+   <feature url="features/nu.psnet.quickimage_1.0.3.2.jar" id="nu.psnet.quickimage" version="1.0.3.2">
+      <category name="QuickImage"/>
+   </feature>
+   <feature url="features/nu.psnet.quickimage_1.0.3.1.jar" id="nu.psnet.quickimage" version="1.0.3.1">
+      <category name="QuickImage"/>
+   </feature>
+   <feature url="features/nu.psnet.quickimage_1.0.3.jar" id="nu.psnet.quickimage" version="1.0.3">
+      <category name="QuickImage"/>
+   </feature>
+   <feature url="features/nu.psnet.quickimage_1.0.2.jar" id="nu.psnet.quickimage" version="1.0.2">
+      <category name="QuickImage"/>
+   </feature>
+   <feature url="features/nu.psnet.quickimage_1.0.1.jar" id="nu.psnet.quickimage" version="1.0.1">
+      <category name="QuickImage"/>
+   </feature>
+   <feature url="features/nu.psnet.quickimage_1.0.0.jar" id="nu.psnet.quickimage" version="1.0.0">
+      <category name="QuickImage"/>
+   </feature>
+   <feature url="features/nu.psnet.quickimage_0.2.0.jar" id="nu.psnet.quickimage" version="0.2.0">
+      <category name="QuickImage"/>
+   </feature>
+   <category-def name="QuickImage" label="QuickImage"/>
+</site>
