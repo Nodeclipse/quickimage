@@ -9,12 +9,14 @@ import java.io.IOException;
 import nu.psnet.quickimage.QuickImagePlugin;
 import nu.psnet.quickimage.core.ImageOrganizer;
 import nu.psnet.quickimage.core.QManager;
+import nu.psnet.quickimage.util.LogUtil;
 import nu.psnet.quickimage.widgets.QStatusCanvas;
 import nu.psnet.quickimage.widgets.QuickImageCanvas;
 
 import org.eclipse.core.resources.IFile;
 import org.eclipse.core.resources.IStorage;
 import org.eclipse.core.runtime.CoreException;
+import org.eclipse.core.runtime.FileLocator;
 import org.eclipse.core.runtime.IPath;
 import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.core.runtime.Platform;
@@ -56,8 +58,9 @@ public class QuickImageEditor extends EditorPart {
 		manager.setImageEditor(this);
 
 		try {
-			iconsdir = Platform.resolve(QuickImagePlugin.getDefault().getBundle().getEntry("/")).getFile() + "icons" + File.separator;
+			iconsdir = FileLocator.resolve(QuickImagePlugin.getDefault().getBundle().getEntry("/")).getFile() + "icons" + File.separator;
 		} catch (IOException e1) {
+			LogUtil.error(e1);
 		}
 
 		// find out what kind the resource(s) to load is
@@ -90,7 +93,8 @@ public class QuickImageEditor extends EditorPart {
 			setPartName(file.getName());
 			manager.getImageOrganizer().setPath(file.getLocation().removeLastSegments(1).toOSString(), file.getName());
 		} else {
-			// could not display image show err message instead
+			// could not display image, show err message instead
+			LogUtil.error("could not display image for "+editorInput);
 		}
 
 		initElements();
