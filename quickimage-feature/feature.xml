@@ -2,7 +2,7 @@
 <feature
       id="nu.psnet.quickimage"
       label="QuickImage"
-      version="1.0.3.2"
+      version="1.1.0.qualifier"
       provider-name="psnet.nu">
 
    <description url="http://www.psnet.nu/eclipse">
@@ -31,7 +31,7 @@ THE ACCOMPANYING PROGRAM IS PROVIDED UNDER THE TERMS OF THIS COMMON PUBLIC LICEN
    </requires>
 
    <plugin
-         id="nu.psnet.quickimage"
+         id="nu.psnet.quickimage.plugin"
          download-size="0"
          install-size="0"
          version="0.0.0"/>

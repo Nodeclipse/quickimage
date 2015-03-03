@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <feature url="features/nu.psnet.quickimage_0.0.0.jar" id="nu.psnet.quickimage" version="0.0.0">
+      <category name="nu.psnet.quickimage"/>
+   </feature>
+   <category-def name="nu.psnet.quickimage" label="QuickImage">
+      <description>
+      	QuickImage - Eclipse plugin for browsing images. https://github.com/persal/quickimage
+      </description>
+   </category-def>
+</site>

@@ -1,0 +1,7 @@
+*.bak
+*~
+bin
+target
+*.jar
+# GFMV generated
+.*.html
