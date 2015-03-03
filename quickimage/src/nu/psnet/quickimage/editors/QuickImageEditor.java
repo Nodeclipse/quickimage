@@ -5,6 +5,7 @@ package nu.psnet.quickimage.editors;
 
 import java.io.File;
 import java.io.IOException;
+import java.net.URL;
 
 import nu.psnet.quickimage.QuickImagePlugin;
 import nu.psnet.quickimage.core.ImageOrganizer;
@@ -19,6 +20,7 @@ import org.eclipse.core.runtime.CoreException;
 import org.eclipse.core.runtime.FileLocator;
 import org.eclipse.core.runtime.IPath;
 import org.eclipse.core.runtime.IProgressMonitor;
+import org.eclipse.core.runtime.Path;
 import org.eclipse.core.runtime.Platform;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.events.ControlAdapter;
@@ -58,7 +60,10 @@ public class QuickImageEditor extends EditorPart {
 		manager.setImageEditor(this);
 
 		try {
-			iconsdir = FileLocator.resolve(QuickImagePlugin.getDefault().getBundle().getEntry("/")).getFile() + "icons" + File.separator;
+			//iconsdir = FileLocator.resolve(QuickImagePlugin.getDefault().getBundle().getEntry("/")).getFile() + "icons" + File.separator;
+			URL dir = FileLocator.find(QuickImagePlugin.getDefault().getBundle(), new Path("icons"), null);
+			dir = FileLocator.toFileURL(dir);
+			iconsdir = dir.getPath() + File.separator;
 		} catch (IOException e1) {
 			LogUtil.error(e1);
 		}
